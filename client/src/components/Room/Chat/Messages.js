@@ -15,8 +15,8 @@ function Messages(props) {
 
     return (
         <MessagesContainer ref={messagesContainer}>
-            {messages.map((message) => (
-                <Message user={message.from} key={message.id}>
+            {messages.map((message, index) => (
+                <Message user={message.from} key={`${message.id}-${index}`}>
                     {message.text}
                 </Message>
             ))}
