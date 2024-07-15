@@ -9,7 +9,7 @@ const server = http.createServer(app);
 
 // Set up CORS for Express
 app.use(cors({
-  origin: "http://localhost:3000",
+  origin: "https://watchtogether-live.netlify.app/",
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type"],
   credentials: true
@@ -20,7 +20,7 @@ const io = new Server(server, {
   path: "/socket",
   serveClient: false,
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://watchtogether-live.netlify.app/",
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type"],
     credentials: true
