@@ -3,7 +3,7 @@ import { showToast } from "../utils/helper";
 
 export const createConnection = (name, roomId = null, videoId = null) => {
   return new Promise((resolve) => {
-    const socket = io("http://localhost:8080", {
+    const socket = io("https://synctube-y4gh.onrender.com", {
       path: "/socket",
       withCredentials: true,
     });
